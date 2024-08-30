@@ -1,83 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Document</title>
-    <link rel="stylesheet" href="Untitled-1.css">
-    <script type="text/javascript" src="Untitled-1.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Yaman</h1>
-    </header>
-    <main>
-        <div class="avatar-container">
-            <img src="https://imgs.search.brave.com/2xtxuQNAJ_uqNN6mzOiVp8As3RosAxDVsOQQR4qAOQQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS12ZWN0/b3Ivd29tYW4tYXZh/dGFyLXByb2ZpbGUt/cm91bmQtaWNvbl8y/NDY0MC0xNDA0Ny5q/cGc" alt="Avatar" class="avatar">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Hello, I'm Yaman Dawadi</h1>
+            <p>A passionate learner eager to start a career in Front-End Developer.</p>
         </div>
-        <form onsubmit="return signing();">
-            <fieldset>
-                <legend>Personal Information</legend>
-                <div class="form-group">
-                    <label for="first">First Name:</label>
-                    <input type="text" id="first" name="first-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="middle">Middle Name:</label>
-                    <input type="text" id="middle" name="middle-name">
-                </div>
-                <div class="form-group">
-                    <label for="last">Last Name:</label>
-                    <input type="text" id="last" name="last-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="num">Age:</label>
-                    <input type="number" id="num" name="age" required>
-                </div>
-            </fieldset>
+    </header>
 
-            <fieldset>
-                <legend>Additional Information</legend>
-                <div class="checkbox-group">
-                    <span>Gender:</span>
-                    <div>
-                        <input type="checkbox" id="male" name="gender" value="male">
-                        <label for="male">Male</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="female" name="gender" value="female">
-                        <label for="female">Female</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="other" name="gender" value="other">
-                        <label for="other">Other</label>
-                    </div>
-                </div>
-                <div class="checkbox-group">
-                    <span>Education:</span>
-                    <div>
-                        <input type="checkbox" id="highschool" name="education" value="highschool">
-                        <label for="highschool">High School</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="bachelor" name="education" value="bachelor">
-                        <label for="bachelor">Bachelor's Degree</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="master" name="education" value="master">
-                        <label for="master">Master's Degree</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="doctorate" name="education" value="doctorate">
-                        <label for="doctorate">Doctorate</label>
-                    </div>
-                </div>
-            </fieldset>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a student currently pursuing B.sc.CSIT . I have a keen interest in Front-End and am dedicated to expanding my skills and knowledge in this area.</p>
+    </section>
 
-            <div class="submit-button">
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
-            </div>
-        </form>
-    </main>
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Though I am still learning, here are some skills I am developing:</p>
+        <ul>
+            <li>Basic HTML & CSS</li>
+            <li>Introduction to JavaScript</li>
+            <li>Problem Solving</li>
+            <li>Teamwork and Collaboration</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>Currently studying at Chitwan College of Technology in CSIT. Expected graduation: 2028</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>I am open to learning opportunities, internships, or any advice. Feel free to reach out via email at <a href="mailto:dawadiyaman123@gmail.com">dawadiyaman123@gmail.com</a>.</p>
+    </section>
+
+    <footer>
+        <p>© 2024 Yaman Dawadi. All rights reserved.</p>
+    </footer>
 </body>
 </html>
