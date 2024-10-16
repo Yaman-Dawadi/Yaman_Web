@@ -1,0 +1,179 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    margin:0%;
+    padding: 0%;
+}
+
+/* Lock Screen Styling */
+.lock-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Full height of viewport */
+    color: rgb(48, 46, 46);
+    text-align: center;
+    padding: 20px; /* Added padding */
+    background-image: url('wallpaperflare.com_wallpaper.jpg'); /* Background image */
+    background-size: cover; /* Cover entire container */
+    background-position: center; /* Center the background image */
+    overflow:hidden; /* Prevent scroll */
+}
+
+.lock-screen h2 {
+    font-size: 48px; /* Keep the font size */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clear font */
+    font-weight: bold; /* Bold text */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Shadow for visibility */
+    margin-top: 600px;
+    
+}
+
+.lock-screen p {
+    font-size: 24px; /* Slightly smaller for secondary text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow for additional text */
+}
+
+.lock-screen button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    border: none;
+    color: rgb(202, 52, 52);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.lock-screen button:hover {
+    background-color: #2980b9;
+}
+
+/* Main Content Hidden Initially using opacity and visibility */
+.content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s linear 0.5s; /* Delay visibility change */
+}
+
+.content.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease;
+}
+
+/* Navbar Styling */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100%;
+    background-color: #fff; /* Added background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+.site-name {
+  position: absolute;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    margin: 0 auto;
+    position: relative;
+    width: fit-content;
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.nav a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* Added margin for spacing */
+}
+
+.nav a:hover {
+    background-color: #3498db;
+    color: white;
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.nav a:focus {
+    outline: 2px solid #3498db; /* Added focus outline for accessibility */
+}
+
+.nav a .label {
+    display: none; /* Hide label initially */
+}
+
+.nav a:hover .label {
+    display: inline; /* Show label on hover */
+}
+
+/* Dark Mode Toggle */
+.slider-container {
+    position: relative;
+    width: 50px;
+    height: 26px;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-container:before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+body.dark-mode .slider-container {
+    background-color: #555;
+}
+
+body.dark-mode .slider-container:before {
+    transform: translateX(24px);
+}
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
